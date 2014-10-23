@@ -1,1 +1,1 @@
-../core/js
+../tinygento-core/js
