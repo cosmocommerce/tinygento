@@ -1,18 +1,18 @@
 #!/bin/bash
 DIR="app/code/community/CosmoCommerce"
+DIR_CORE="app/code/community/CosmoCommerce/Core"
 if [ -d "$DIR" ]
 then
 
+    if [ -d "$DIR_CORE" ]
+    then
+        rm app/code/community/CosmoCommerce/Core -rf
+    fi
 else
     mkdir "$DIR"
 fi
 
 
-DIR_CORE="app/code/community/CosmoCommerce/Core"
-if [ -d "$DIR_CORE" ]
-then
-    rm app/code/community/CosmoCommerce/Core -rf
-fi
 
 
 rm errors -rf
