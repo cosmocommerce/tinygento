@@ -2,9 +2,16 @@
 DIR="app/code/community/CosmoCommerce"
 if [ -d "$DIR" ]
 then
-    rm app/code/community/CosmoCommerce/Core -rf
+
 else
     mkdir "$DIR"
+fi
+
+
+DIR_CORE="app/code/community/CosmoCommerce/Core"
+if [ -d "$DIR_CORE" ]
+then
+    rm app/code/community/CosmoCommerce/Core -rf
 fi
 
 
@@ -38,8 +45,8 @@ ln -sr ../tinygento-core/lib/ lib
 ln -sr ../tinygento-core/app/locale app/locale
 ln -sr ../tinygento-core/app/code/core app/code/core
 ln -sr ../tinygento-core/app/code/community/Cm app/code/community/Cm
-ln -sr ../tinygento-core/app/code/community/CosmoCommerce/Core app/code/community/CosmoCommerce/Core
 ln -sr ../tinygento-core/app/code/community/Phoenix app/code/community/Phoenix
+ln -sr ../tinygento-core/app/code/community/CosmoCommerce/Core app/code/community/CosmoCommerce/Core
 ln -sr ../tinygento-core/app/design/adminhtml/default app/design/adminhtml/default
 ln -sr ../tinygento-core/app/design/frontend/base app/design/frontend/base
 ln -sr ../tinygento-core/app/design/frontend/default app/design/frontend/default
